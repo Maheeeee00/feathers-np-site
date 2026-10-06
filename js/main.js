@@ -125,6 +125,20 @@ function clickable(container, selector, fn){
   });
 }
 
+// Real photos: put files in images/products/<id>.jpg (or .png / .webp)
+// and images/care/<id>.jpg. If a photo is missing, the illustration shows instead.
+function photo(folder, id, alt){
+  return `<img class="photo" src="images/${folder}/${id}.jpg" alt="${alt}" loading="lazy"
+    data-exts="png,webp,jpeg" onload="photoOk(this)" onerror="photoNext(this)">`;
+}
+function photoOk(img){ img.parentNode.classList.add("has-photo"); }
+function photoNext(img){
+  const exts = img.dataset.exts ? img.dataset.exts.split(",") : [];
+  if (!exts.length) { img.remove(); return; }
+  img.dataset.exts = exts.slice(1).join(",");
+  img.src = img.src.replace(/\.[a-z]+$/i, "." + exts[0]);
+}
+
 // Products
 const grid = $("productGrid");
 if (grid) {
@@ -133,7 +147,7 @@ if (grid) {
     <article class="product reveal" data-id="${p.id}" data-cats="${p.cats.join(" ")}" tabindex="0">
       <div class="product-stage" style="--tint:${p.tint}">
         ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
-        ${bottle(p)}
+        ${bottle(p)}${photo("products", p.id, p.name)}
       </div>
       <div class="product-body">
         <small>${p.tag}</small>
@@ -150,7 +164,7 @@ if (grid) {
     const p = products.find(x => x.id === id);
     openModal(`
       <div class="m-grid">
-        <div class="m-stage" style="--tint:${p.tint}">${bottle(p)}</div>
+        <div class="m-stage" style="--tint:${p.tint}">${bottle(p)}${photo("products", p.id, p.name)}</div>
         <div class="m-info">
           <small>${p.tag}</small>
           <h3>${p.name}</h3>
@@ -180,7 +194,7 @@ if (careGrid) {
   const limit = +careGrid.dataset.limit || articles.length;
   careGrid.innerHTML = articles.slice(0, limit).map(a => `
     <article class="care-card reveal" data-id="${a.id}" data-tag="${a.tag}" tabindex="0">
-      <div class="care-img" style="--g1:${a.g1};--g2:${a.g2}"><span>${a.tag}</span></div>
+      <div class="care-img" style="--g1:${a.g1};--g2:${a.g2}">${photo("care", a.id, a.title)}<span>${a.tag}</span></div>
       <small class="read">${a.read} read</small>
       <h3>${a.title}</h3>
       <p>${a.short}</p>
@@ -190,7 +204,7 @@ if (careGrid) {
     const a = articles.find(x => x.id === id);
     openModal(`
       <div class="article">
-        <div class="article-hero" style="--g1:${a.g1};--g2:${a.g2}"><span>${a.tag} · ${a.read} read</span></div>
+        <div class="article-hero" style="--g1:${a.g1};--g2:${a.g2}">${photo("care", a.id, a.title)}<span>${a.tag} · ${a.read} read</span></div>
         <div class="article-body">
           <h3>${a.title}</h3>
           ${a.body.map(p => `<p>${p}</p>`).join("")}

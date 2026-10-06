@@ -1,0 +1,35 @@
+HOW TO ADD REAL PHOTOS
+======================
+
+1. Open https://feathersnp.com and each product page.
+2. Right-click the product photo -> "Save image as..."
+3. Rename it EXACTLY as shown below and put it in the right folder.
+   .jpg, .png or .webp all work.
+4. Upload to GitHub. Vercel updates the site automatically.
+
+Any photo you don't add keeps showing the illustration, so the site never looks broken.
+
+PRODUCT PHOTOS  ->  put in folder: images/products/
+---------------------------------------------------
+AviVit-D Breeder ........ avivit.jpg
+M Power ................. mpower.jpg
+EN Lyte ................. enlyte.jpg
+D Cal Super ............. dcal.jpg
+Jaundy Syrup ............ jaundy.jpg     (feathersnp.com/product/jaundy-syrup/)
+Megavit-B ............... megavitb.jpg   (feathersnp.com/product/megavit-b/)
+Silima Syrup ............ silima.jpg
+Citof Syrup ............. citof.jpg
+
+Tip: square photos with a white or plain background look best.
+
+ARTICLE PHOTOS  ->  put in folder: images/care/
+-----------------------------------------------
+Building a balanced diet for parrots ...... diet.jpg
+Preparing your pairs for breeding season .. breeding.jpg
+Keeping birds safe in extreme heat ........ heat.jpg
+Helping your birds through the moult ...... moult.jpg
+Clean water: the simplest health habit .... water.jpg
+Early warning signs of illness in birds ... signs.jpg
+
+Tip: use landscape bird photos (around 1200 x 800). If you don't have
+your own, free photos from unsplash.com or pexels.com work well.

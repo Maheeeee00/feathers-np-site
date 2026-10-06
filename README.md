@@ -22,4 +22,4 @@ A static, responsive marketing site (HTML + CSS + JavaScript, no build step).
 - **Articles:** edit the `articles` list in `js/main.js`.
 - **Contact details:** search for `Add company address here`, `+92 XXX XXXXXXX` and `info@yourdomain.com` in `contact.html`.
 - **Contact form:** currently a demo. To receive messages, connect a free service like Formspree or Web3Forms.
-- **Real product photos:** replace the bottle illustrations with images in the product cards when available.
+- **Real photos:** see `images/HOW-TO-ADD-PHOTOS.txt`. Save each photo with the given name into `images/products/` or `images/care/` and it appears automatically.
