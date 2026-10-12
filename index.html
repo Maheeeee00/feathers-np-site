@@ -13,13 +13,6 @@
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Nationwide delivery across Pakistan</span>
-      <span class="hide-sm">Vet-formulated · Quality assured · Made for Pakistani climate</span>
-    </div>
-  </div>
-
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="Feathers Nutripharma home">
@@ -32,15 +25,28 @@
       </a>
       <nav class="nav" id="nav">
         <a href="index.html" class="active" aria-current="page">Home</a>
-        <a href="about.html">About</a>
-        <a href="products.html">Products</a>
-        <a href="avian-care.html">Avian Care</a>
-        <a href="contact.html">Contact</a>
+        <div class="has-sub">
+          <a href="products.html">Animal Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="sub"><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a></div>
+        </div>
+        <a href="human-health.html">Human Health</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
       </nav>
-      <a href="contact.html" class="btn btn-primary btn-sm hide-sm">Become a Distributor</a>
+      <div class="head-tools">
+        <button class="icon-btn" id="searchBtn" aria-label="Search products"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+        <a class="cart" href="products.html" aria-label="Shopping cart"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg><span class="cart-count">0</span><b>Rs0.00</b></a>
+      </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-box">
+      <button class="search-close" id="searchClose" aria-label="Close search">×</button>
+      <input id="searchInput" type="search" placeholder="Start typing to see products you are looking for." autocomplete="off">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
 <!-- Hero -->
   <section class="hero" id="home">
     <div class="hero-bg" aria-hidden="true">
@@ -48,14 +54,14 @@
     </div>
     <div class="container hero-inner">
       <div class="hero-copy reveal">
-        <span class="eyebrow"><i class="dot"></i> Avian & Pet Health · Pakistan</span>
-        <h1>Nutrition that lets every <em>feather</em> shine.</h1>
-        <p class="lead">Scientifically formulated vitamins, minerals, electrolytes and health syrups — developed to keep pet birds and animals strong, active and breeding well, in every season.</p>
+        <span class="eyebrow">Feathers Nutripharma (Private) Limited</span>
+        <h1>Pioneer in Avian Health and <em>Wellness</em></h1>
+        <p class="lead">Feathers Nutripharma goes beyond nutrition to support the overall health and happiness of your avian companions — from immune-boosting supplements to stress management solutions.</p>
         <div class="hero-cta">
           <a href="products.html" class="btn btn-primary">Explore Products
             <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="about.html" class="btn btn-ghost">Our Story</a>
+          <a href="about.html" class="btn btn-ghost">About us</a>
         </div>
         <ul class="hero-trust">
           <li><b data-count="9">0</b><span>Core formulas</span></li>
@@ -91,43 +97,30 @@
     </div>
   </section>
 
-  <!-- Categories -->
-  <section class="section" id="categories">
+  <!-- New arrivals -->
+  <section class="section" id="new">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">What we care for</span>
-        <h2>Three ranges, one standard of quality.</h2>
+      <div class="section-head split reveal">
+        <div><span class="eyebrow">Just launched</span><h2>New Arrivals</h2></div>
+        <a href="products.html" class="btn btn-ghost">View all products</a>
       </div>
-      <div class="cat-grid">
-        <a href="products.html?cat=birds" class="cat-card reveal">
-          <div class="cat-ico">
-            <svg viewBox="0 0 48 48"><path d="M8 30c6-1 10-5 12-10 3 6 9 9 16 8-3 6-9 10-16 10S10 35 8 30z" fill="currentColor"/><circle cx="31" cy="15" r="5" fill="currentColor"/><path d="M36 14l6-1-5 4" fill="currentColor"/></svg>
-          </div>
-          <h3>Pet Birds</h3>
-          <p>Parrots, finches, budgies and cage birds — daily vitamins, breeding formulas and moult support.</p>
-          <span class="cat-link">View range →</span>
-        </a>
-        <a href="products.html?cat=animals" class="cat-card reveal">
-          <div class="cat-ico">
-            <svg viewBox="0 0 48 48"><circle cx="14" cy="16" r="4" fill="currentColor"/><circle cx="24" cy="11" r="4" fill="currentColor"/><circle cx="34" cy="16" r="4" fill="currentColor"/><path d="M24 22c7 0 12 7 12 12 0 4-3 5-6 4-2-1-4-2-6-2s-4 1-6 2c-3 1-6 0-6-4 0-5 5-12 12-12z" fill="currentColor"/></svg>
-          </div>
-          <h3>Pet Animals</h3>
-          <p>Liver, digestion and B‑complex syrups that keep companion animals energetic and healthy.</p>
-          <span class="cat-link">View range →</span>
-        </a>
-        <a href="products.html?cat=breeders" class="cat-card reveal">
-          <div class="cat-ico">
-            <svg viewBox="0 0 48 48"><ellipse cx="24" cy="27" rx="11" ry="14" fill="currentColor"/><path d="M18 18c2-3 4-4 6-4" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/></svg>
-          </div>
-          <h3>Breeders & Aviaries</h3>
-          <p>Calcium, D3 and electrolytes for strong eggs, healthy chicks and fast recovery from heat stress.</p>
-          <span class="cat-link">View range →</span>
-        </a>
-      </div>
+      <div class="product-grid" id="newGrid" data-ids="megavitb,cranro,citof,jaundy"></div>
     </div>
   </section>
 
-  
+  <!-- Best sellers -->
+  <section class="section alt" id="best">
+    <div class="container">
+      <div class="section-head split reveal">
+        <div><span class="eyebrow">Most trusted</span><h2>Our Best Sellers</h2></div>
+        <a href="products.html?cat=birds" class="btn btn-ghost">Shop Pet Birds</a>
+      </div>
+      <div class="product-grid cols3" id="bestGrid" data-ids="avivit,dcal,mpower"></div>
+      <p class="note">Click any product for details. Prices are indicative and vary by pack size.</p>
+    </div>
+  </section>
+
+  <!-- CEO message -->
   <section class="section about">
     <div class="container about-inner">
       <div class="about-visual reveal">
@@ -142,64 +135,50 @@
         </div>
       </div>
       <div class="about-copy reveal">
-        <span class="eyebrow">Who we are</span>
-        <h2>Innovation and research, in service of healthier pets.</h2>
-        <p>Feathers Nutripharma (Pvt) Ltd develops scientifically formulated supplements and health products built around the specific needs of birds and companion animals — supporting immunity, stress resilience and overall wellbeing.</p>
-        <a href="about.html" class="btn btn-primary">More about us</a>
+        <span class="eyebrow">Message from the CEO</span>
+        <h2>Dr. Muhammad Haseeb Saeed</h2>
+        <p><b>Director / CEO</b></p>
+        <p>At Feathers Nutripharma Pvt Ltd, our vision is driven by a deep commitment to enhancing the health and well-being of pets through innovation, research and high-quality nutritional solutions.</p>
+        <a href="about.html" class="btn btn-primary">Read More</a>
       </div>
     </div>
   </section>
 
-  <section class="section products">
-    <div class="container">
-      <div class="section-head split reveal">
-        <div>
-          <span class="eyebrow">Featured Products</span>
-          <h2>Our best sellers.</h2>
-        </div><a href="products.html" class="btn btn-ghost">View all products</a>
+  <!-- Holistic avian care -->
+  <section class="holistic">
+    <div class="container holistic-inner reveal">
+      <div>
+        <span class="eyebrow light">Holistic Avian Care</span>
+        <h2>Holistic Avian Care Beyond Nutrition</h2>
+        <p>Feathers Nutripharma goes beyond nutrition to support the overall health and happiness of your avian companions. From immune-boosting supplements to stress management solutions.</p>
       </div>
-      <div class="product-grid" id="productGrid" data-limit="4"></div>
-      <p class="note">Click any product for details. Prices are indicative and may vary by pack size and retailer.</p>
+      <a href="products.html?cat=birds" class="btn btn-gold">SHOP NOW</a>
     </div>
   </section>
-<!-- Why us -->
-  <section class="section why">
+
+  <!-- Quality -->
+  <section class="section">
     <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow light">Why Feathers</span>
-        <h2>Care that goes beyond the bottle.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal"><span class="why-num">01</span><h3>Science-led formulas</h3><p>Balanced vitamins, minerals and amino acids in ratios designed for avian metabolism.</p></div>
-        <div class="why-card reveal"><span class="why-num">02</span><h3>Climate-ready</h3><p>Electrolyte and D3 support for summer heat stress and low‑sunlight indoor aviaries.</p></div>
-        <div class="why-card reveal"><span class="why-num">03</span><h3>Easy to dose</h3><p>Water-soluble powders and syrups that mix easily into drinking water or soft food.</p></div>
-        <div class="why-card reveal"><span class="why-num">04</span><h3>Expert guidance</h3><p>Practical care articles on nutrition, behaviour and health from our avian care team.</p></div>
+      <div class="section-head center reveal"><span class="eyebrow">Our standards</span><h2>Built on quality, compliance and transparency.</h2></div>
+      <div class="values-grid">
+        <div class="value-card reveal"><span class="value-ico">01</span><h3>Quality Assurance</h3><p>Ensures that products are consistently manufactured and controlled according to rigorous quality standards.</p></div>
+        <div class="value-card reveal"><span class="value-ico">02</span><h3>Regulatory Compliance</h3><p>Demonstrates adherence to international regulatory guidelines in the manufacturing process and end products.</p></div>
+        <div class="value-card reveal"><span class="value-ico">03</span><h3>Process Transparency</h3><p>Promotes systematic and documented procedures for production, monitoring, and testing.</p></div>
       </div>
     </div>
   </section>
 
-  
-  <section class="section care">
+  <!-- Avian care resource -->
+  <section class="section alt care">
     <div class="container">
       <div class="section-head split reveal">
-        <div><span class="eyebrow">Your Avian Care Resource</span><h2>Learn, care and connect.</h2></div>
+        <div><span class="eyebrow">Avian Care Resource</span><h2>Learn, care and connect.</h2></div>
         <a href="avian-care.html" class="btn btn-ghost">All articles</a>
       </div>
       <div class="care-grid" id="careGrid" data-limit="3"></div>
     </div>
   </section>
-<!-- CTA band -->
-  <section class="cta-band">
-    <div class="container cta-inner reveal">
-      <div>
-        <h2>Stock Feathers Nutripharma in your store.</h2>
-        <p>Pet shops, vets and distributors — get trade pricing and product support.</p>
-      </div>
-      <a href="contact.html" class="btn btn-gold">Partner with us</a>
-    </div>
-  </section>
 
-  
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -207,15 +186,15 @@
           <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true"><path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/><path d="M17 49L44 16" stroke="#0b3f35" stroke-width="2.5" stroke-linecap="round"/></svg>
           <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
         </a>
-        <p>Scientifically formulated nutrition for birds and pets.</p>
+        <p>Pioneer in Avian Health and Wellness</p>
       </div>
-      <div><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="avian-care.html">Avian Care</a></div>
-      <div><h4>Products</h4><a href="products.html?cat=birds">Pet Birds</a><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=breeders">Breeders</a></div>
-      <div><h4>Company</h4><a href="contact.html">Contact</a><a href="contact.html">Distributors</a></div>
+      <div><h4>Explore</h4><a href="index.html">Home</a><a href="products.html">Animal Health</a><a href="human-health.html">Human Health</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
+      <div><h4>Animal Health</h4><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a><a href="avian-care.html">Avian Care</a></div>
+      <div><h4>Follow us</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
     </div>
     <div class="container footer-bottom">
-      <span>© <span id="year"></span> Feathers Nutripharma (Pvt) Ltd.</span>
-      <span>Test build — design preview</span>
+      <span>© <span id="year"></span> Feathers Nutripharma (Private) Limited. All rights reserved.</span>
+      <span>Pioneer in Avian Health and Wellness</span>
     </div>
   </footer>
 

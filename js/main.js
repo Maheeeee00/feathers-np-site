@@ -149,10 +149,10 @@ function photoNext(img){
 }
 
 // Products
-const grid = $("productGrid");
-if (grid) {
-  const limit = +grid.dataset.limit || products.length;
-  grid.innerHTML = products.slice(0, limit).map(p => `
+document.querySelectorAll(".product-grid").forEach(grid => {
+  const ids = grid.dataset.ids ? grid.dataset.ids.split(",") : null;
+  const list = ids ? ids.map(i => products.find(p => p.id === i)).filter(Boolean) : products.slice(0, +grid.dataset.limit || products.length);
+  grid.innerHTML = list.map(p => `
     <article class="product reveal" data-id="${p.id}" data-cats="${p.cats.join(" ")}" tabindex="0">
       <div class="product-stage" style="--tint:${p.tint}">
         ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
@@ -195,7 +195,7 @@ if (grid) {
   chips.forEach(c => c.addEventListener("click", () => applyFilter(c.dataset.filter)));
   const cat = new URLSearchParams(location.search).get("cat");
   if (cat && chips.length) applyFilter(cat);
-}
+});
 
 // Articles
 const careGrid = $("careGrid");
@@ -272,3 +272,22 @@ if (form) {
 }
 
 $("year").textContent = new Date().getFullYear();
+
+
+// Search overlay
+(function(){
+  const ov=$("searchOverlay"), input=$("searchInput"), res=$("searchResults");
+  if(!ov) return;
+  const open=()=>{ov.classList.add("open");ov.setAttribute("aria-hidden","false");setTimeout(()=>input.focus(),50)};
+  const close=()=>{ov.classList.remove("open");ov.setAttribute("aria-hidden","true")};
+  $("searchBtn").addEventListener("click",open);
+  $("searchClose").addEventListener("click",close);
+  ov.addEventListener("click",e=>{if(e.target===ov)close()});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+  input.addEventListener("input",()=>{
+    const q=input.value.trim().toLowerCase();
+    if(!q){res.innerHTML="";return}
+    const hits=products.filter(p=>(p.name+" "+p.tag+" "+p.short).toLowerCase().includes(q));
+    res.innerHTML=hits.length?hits.map(p=>`<a class="sr" href="products.html"><img src="images/products/${p.id}.webp" alt=""><span><b>${p.name}</b><small>${p.tag} · ${p.price}</small></span></a>`).join(""):'<p class="muted">No products found.</p>';
+  });
+})();
