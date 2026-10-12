@@ -1,5 +1,5 @@
 // Product data — edit names, prices and descriptions here
-const products = [
+const allProducts = [
   { id:"avivit", name:"AviVit‑D Breeder", tag:"Breeding Formula", cats:["birds","breeders"], price:"Rs 3,000 – 10,000",
     c1:"#0f5c4d", c2:"#1f8a72", cap:"#c9a24b", tint:"#cdeadf", badge:"Best seller",
     short:"12 essential vitamins with boosted Vitamin D3.",
@@ -46,6 +46,10 @@ const products = [
     desc:"Formulated to support respiratory comfort and recovery in pets.",
     points:["Respiratory support","Recovery aid","Oral syrup format"], sizes:["30 ml","120 ml"] },
 ];
+
+// Only products that have a real photo in images/products/ are shown (add enlyte/silima here once photos exist)
+const hasPhoto = ["avivit","mpower","dcal","jaundy","megavitb","cranro","citof"];
+const products = allProducts.filter(p => hasPhoto.includes(p.id));
 
 // Avian care articles — edit or add articles here
 const articles = [
