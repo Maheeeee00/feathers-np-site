@@ -614,3 +614,7 @@ h1 em::after{display:none}
 .checkout{overflow:hidden}
 .co-summary{margin-right:0;padding-right:0;box-shadow:100vw 0 0 0 var(--cream)}
 @media (max-width:860px){.co-summary{margin:0 -16px;padding:28px 16px;box-shadow:none}}
+
+/* CEO photo */
+.ceo-portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;display:block}
+.ceo-photo{flex:none;width:84px;height:84px;border-radius:6px;object-fit:cover;object-position:50% 12%}
