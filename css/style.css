@@ -1,20 +1,20 @@
 :root{
-  --green-900:#072e27;
-  --green-800:#0b3f35;
-  --green-700:#0f5c4d;
-  --green-500:#1f8a72;
-  --green-100:#e3f1ec;
-  --gold:#c9a24b;
-  --gold-light:#f3e3b5;
-  --cream:#faf7f0;
-  --ink:#14211e;
-  --muted:#5b6b66;
-  --line:#e4e0d4;
+  --green-900:#0b2a33;
+  --green-800:#0f3d4a;
+  --green-700:#17717f;
+  --green-500:#1f8a9a;
+  --green-100:#e8f2f4;
+  --gold:#c8102e;
+  --gold-light:#d6eaee;
+  --cream:#f5f8f9;
+  --ink:#16252b;
+  --muted:#55656b;
+  --line:#dce4e7;
   --white:#fff;
-  --radius:22px;
-  --shadow:0 20px 50px -20px rgba(7,46,39,.28);
-  --shadow-sm:0 8px 24px -12px rgba(7,46,39,.25);
-  --serif:'Fraunces',Georgia,serif;
+  --radius:8px;
+  --shadow:0 6px 20px -8px rgba(11,42,51,.18);
+  --shadow-sm:0 2px 8px -4px rgba(11,42,51,.18);
+  --serif:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -372,3 +372,107 @@ h3{font-size:1.3rem;font-weight:600}
 /* real product photos in hero */
 .hero-photo{position:relative;width:60%;height:auto;object-fit:contain;mix-blend-mode:multiply;animation:bob 5s ease-in-out infinite;--s:1}
 .fc-thumb{width:44px;height:44px;border-radius:12px;object-fit:contain;background:#fff;mix-blend-mode:normal;flex:none}
+
+
+/* ===== Realistic / corporate restyle (no cartoon effects) ===== */
+body{background:#fff}
+h1,h2,h3{font-weight:700;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--green-700)}
+h1 em::after{display:none}
+.eyebrow{letter-spacing:.1em;color:var(--gold)}
+.dot{display:none}
+.btn{border-radius:6px;box-shadow:none!important;transition:background .2s,color .2s}
+.btn:hover{transform:none}
+.btn-primary{background:var(--green-700)}
+.btn-primary:hover{background:var(--green-800)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:#a50d26}
+.header{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid var(--line)}
+.nav a::after{background:var(--gold)}
+.logo-text small{letter-spacing:.2em}
+.topbar{background:var(--green-900)}
+
+/* hero: flat, no blobs, rings, floating or bobbing */
+.hero{background:linear-gradient(180deg,#f5f8f9,#fff)}
+.hero-bg,.blob,.ring{display:none}
+.hero-photo{animation:none;mix-blend-mode:multiply;width:78%}
+.orbit{width:min(460px,90vw)}
+.float-card{animation:none;backdrop-filter:none;background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow-sm)}
+.fc-thumb{border-radius:4px;border:1px solid var(--line)}
+.fc1{top:4%;left:-4%}.fc2{bottom:6%;left:-2%}.fc3{top:44%;right:-6%}
+.hero-trust b{font-weight:700}
+.marquee{background:var(--green-800);color:#e6f2f4}
+.marquee-track{font-family:var(--sans);font-style:normal;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;gap:44px}
+.marquee-track span:nth-child(even){display:none}
+
+.section{padding:90px 0}
+.cat-card{border-radius:8px;background:#fff}
+.cat-card::before{display:none}
+.cat-card:hover,.product:hover,.value-card:hover,.why-card:hover{transform:none;box-shadow:var(--shadow)}
+.cat-ico{border-radius:6px;background:var(--green-700);color:#fff}
+.about{background:var(--cream)}
+.about-card.main{background:var(--green-800)}
+.about-feather{animation:none;opacity:.35}
+.about-card.main p{font-family:var(--sans);font-style:normal;font-weight:600;font-size:1.35rem}
+.about-card.stat{background:#fff;border:1px solid var(--line)}
+.about-card.stat.alt{background:#fff;border:1px solid var(--line)}
+.ceo{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px}
+.ceo-avatar{background:var(--green-800);color:#fff}
+.checks li::before{border-radius:4px;background:var(--green-700)}
+
+.chip{border-radius:6px}
+.product{border-radius:8px}
+.product-stage{background:#fff;border-bottom:1px solid var(--line);height:240px}
+.product-stage.has-photo{background:#fff}
+.product:hover .product-stage .photo{transform:none}
+.badge{border-radius:4px;background:var(--gold);color:#fff;box-shadow:none}
+.product-body small,.m-info small{color:var(--gold)}
+.price{color:var(--green-800)}
+.more{border-radius:4px;background:var(--green-100)}
+
+.why{background:var(--green-900)}
+.why::before{display:none}
+.why-card{border-radius:8px;background:rgba(255,255,255,.04)}
+.why-num{font-family:var(--sans);font-weight:700;color:#fff;opacity:.5;font-size:1.8rem}
+
+.care-img{height:110px;border-radius:8px;background:var(--green-800)!important}
+.care-img::after{display:none}
+.care-img span{border-radius:4px}
+.care-card:hover .care-img,.care-card:hover .care-img .photo{transform:none}
+.care-card .read{color:var(--gold)}
+.article-hero{background:var(--green-800)!important;height:120px}
+.article-hero span{border-radius:4px}
+
+.cta-inner{background:var(--green-800);border-radius:8px}
+.cta-inner::after{display:none}
+.contact{background:var(--cream)}
+.contact-list li>span{border-radius:6px;background:#fff;border:1px solid var(--line);color:var(--green-700)}
+.contact-form{border-radius:8px;background:#fff}
+.contact-form input,.contact-form select,.contact-form textarea{border-radius:6px}
+.footer{background:var(--green-900)}
+.footer-inner a:not(.logo):hover{color:#fff}
+
+.modal-backdrop{backdrop-filter:none;background:rgba(11,42,51,.6)}
+.modal-box{border-radius:8px}
+.modal-close{border-radius:6px}
+.m-stage{background:#fff;border-right:1px solid var(--line)}
+.m-info li::before{content:"";width:6px;height:6px;border-radius:1px;background:var(--gold);top:.55em}
+.sizes span{border-radius:4px}
+
+.value-card{border-radius:8px}
+.value-ico{border-radius:6px;background:var(--green-100);color:var(--green-700);font-size:1.1rem;font-weight:700}
+.steps::before{background:var(--line);height:2px}
+.steps b{border-radius:6px;background:var(--green-700);color:#fff;font-family:var(--sans)}
+.faq details{border-radius:6px}
+.faq summary::after{color:var(--gold)}
+.page-hero{background:var(--cream)}
+.reveal{transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+
+/* refinements */
+.eyebrow.light{color:#9fd0d8}
+.hero-photo{width:62%}
+.fc1{top:2%;left:0}.fc2{bottom:2%;left:0}.fc3{top:auto;bottom:14%;right:0}
+.care-img{height:auto!important;background:none!important;margin-bottom:12px;overflow:visible}
+.care-img span{position:static;display:inline-block;background:var(--green-100);color:var(--green-700);border-radius:4px}
+.care-card{border-top:3px solid var(--green-700);padding-top:18px}
+.about-feather{display:none}
