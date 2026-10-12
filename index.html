@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Feathers Nutripharma | Science-Led Avian & Pet Nutrition</title>
-  <meta name="description" content="Scientifically formulated vitamins, minerals, electrolytes and health syrups for pet birds and animals in Pakistan." />
+  <title>Feathers NutriPharma | Science-Based Nutrition for Better Health</title>
+  <meta name="description" content="Feathers NutriPharma — nutraceutical solutions for human and veterinary health." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M50 6C30 8 14 24 12 46l-6 12 4 2 6-11c20-2 36-18 38-43z' fill='%230f5c4d'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,24 +12,19 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Feathers Nutripharma home">
-        <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
-          <path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/>
-          <path d="M17 49L44 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M24 40l10 1M29 33l10 1M34 26l9 1" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
-        </svg>
-        <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
-      </a>
+      <a href="index.html" class="logo" aria-label="Feathers NutriPharma home"><img class="logo-img" src="images/logo.png" alt="Feathers NutriPharma (Private) Limited"></a>
       <nav class="nav" id="nav">
         <a href="index.html" class="active" aria-current="page">Home</a>
         <div class="has-sub">
-          <a href="products.html">Animal Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="sub"><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a></div>
+          <a href="human-health.html">Human Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="sub"><a href="human-health.html">Human Health Division</a><a href="surgery-wound-healing.html">Surgery &amp; Wound Healing</a><a href="#" data-nutrava>NUTRAVA</a></div>
         </div>
-        <a href="human-health.html">Human Health</a>
+        <div class="has-sub">
+          <a href="veterinary-health.html">Veterinary Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="sub"><a href="veterinary-health.html">Veterinary Division</a><a href="pet-animals.html">Pet Animals</a><a href="pet-birds.html">Pet Birds</a><a href="products.html">Shop Products</a></div>
+        </div>
         <a href="about.html">About us</a>
         <a href="contact.html">Contact us</a>
       </nav>
@@ -43,153 +38,150 @@
   <div class="search-overlay" id="searchOverlay" aria-hidden="true">
     <div class="search-box">
       <button class="search-close" id="searchClose" aria-label="Close search">×</button>
-      <input id="searchInput" type="search" placeholder="Start typing to see products you are looking for." autocomplete="off">
+      <input id="searchInput" type="search" placeholder="Search our veterinary products" autocomplete="off">
       <div id="searchResults" class="search-results"></div>
     </div>
   </div>
-<!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="blob b1"></div><div class="blob b2"></div><div class="grain"></div>
-    </div>
-    <div class="container hero-inner">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">Feathers Nutripharma (Private) Limited</span>
-        <h1>Pioneer in Avian Health and <em>Wellness</em></h1>
-        <p class="lead">Feathers Nutripharma goes beyond nutrition to support the overall health and happiness of your avian companions — from immune-boosting supplements to stress management solutions.</p>
-        <div class="hero-cta">
-          <a href="products.html" class="btn btn-primary">Explore Products
-            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="about.html" class="btn btn-ghost">About us</a>
-        </div>
-        <ul class="hero-trust">
-          <li><b data-count="9">0</b><span>Core formulas</span></li>
-          <li><b data-count="12">0</b><span>Vitamins in AviVit-D</span></li>
-          <li><b>PK</b><span>Nationwide reach</span></li>
-        </ul>
-      </div>
 
-      <div class="hero-visual reveal">
-        <div class="orbit">
-          <div class="ring r1"></div><div class="ring r2"></div>
-          <img class="hero-photo" src="images/products/avivit.webp" alt="AviVit-D Breeder by Feathers Nutripharma">
-          <div class="float-card fc1">
-            <img class="fc-thumb" src="images/products/jaundy.webp" alt="">
-            <div><b>Jaundy Syrup</b><small>Liver health support</small></div>
-          </div>
-          <div class="float-card fc2">
-            <img class="fc-thumb" src="images/products/dcal.webp" alt="">
-            <div><b>D Cal Super</b><small>Calcium + Vitamin D3</small></div>
-          </div>
-          <div class="float-card fc3">
-            <img class="fc-thumb" src="images/products/mpower.webp" alt="">
-            <div><b>M Power</b><small>Vitamins + Amino acids</small></div>
-          </div>
-        </div>
+  <section class="slider" id="home" aria-roledescription="carousel" aria-label="Feathers NutriPharma highlights">
+    <div class="slides">
+      <div class="slide active" style="--img:url(../images/hero-1.jpg)" role="group" aria-label="Slide 1 of 5">
+        <div class="container slide-inner"><div class="slide-copy">
+          <span class="eyebrow">One company. Two areas of health.</span>
+          <h1>Science-Based Nutrition for Better Health</h1>
+          <p>Feathers NutriPharma develops and promotes innovative nutraceutical solutions for human and veterinary health, combining scientific knowledge, targeted nutrition and a commitment to better health outcomes.</p>
+          <div class="hero-cta"><a href="human-health.html" class="btn btn-primary">Human Health</a><a href="veterinary-health.html" class="btn btn-ghost">Veterinary Health</a></div>
+        </div></div>
+      </div>
+      <div class="slide" style="--img:url(../images/hero-2.jpg)" role="group" aria-label="Slide 2 of 5">
+        <div class="container slide-inner"><div class="slide-copy">
+          <span class="eyebrow">Human Health Division</span>
+          <h2>Advancing Nutrition in Human Healthcare</h2>
+          <p>Targeted nutritional solutions designed to support health, recovery and well-being across specialized healthcare needs.</p>
+          <div class="hero-cta"><a href="human-health.html" class="btn btn-primary">Explore Human Health</a></div>
+        </div></div>
+      </div>
+      <div class="slide" style="--img:url(../images/hero-1.jpg);--size:150%;--pos:100% 55%" role="group" aria-label="Slide 3 of 5">
+        <div class="container slide-inner"><div class="slide-copy">
+          <span class="eyebrow">Veterinary Health Division</span>
+          <h2>Better Nutrition. Healthier Pets.</h2>
+          <p>Science-based veterinary nutraceutical solutions supporting the health and well-being of companion animals and pet birds.</p>
+          <div class="hero-cta"><a href="pet-animals.html" class="btn btn-primary">Explore Veterinary Health</a></div>
+        </div></div>
+      </div>
+      <div class="slide" style="--img:url(../images/hero-1.jpg);--size:250%;--pos:100% 45%" role="group" aria-label="Slide 4 of 5">
+        <div class="container slide-inner"><div class="slide-copy">
+          <span class="eyebrow">Pet Birds</span>
+          <h2>Specialized Nutrition for Companion Birds</h2>
+          <p>Pet birds have unique nutritional requirements. Our solutions support health, vitality and long-term well-being.</p>
+          <div class="hero-cta"><a href="pet-birds.html" class="btn btn-primary">Explore Pet Birds</a></div>
+        </div></div>
+      </div>
+      <div class="slide" style="--img:url(../images/hero-2.jpg);--size:135%;--pos:85% 75%" role="group" aria-label="Slide 5 of 5">
+        <div class="container slide-inner"><div class="slide-copy">
+          <span class="eyebrow">Science &amp; Innovation</span>
+          <h2>Driven by Science. Focused on Health.</h2>
+          <p>From veterinary nutrition to emerging human-health solutions, Feathers NutriPharma continues to expand its portfolio through research, innovation and targeted nutritional support.</p>
+          <div class="hero-cta"><a href="about.html" class="btn btn-primary">About Feathers NutriPharma</a></div>
+        </div></div>
       </div>
     </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Multivitamins</span><span>✦</span><span>Electrolytes</span><span>✦</span><span>Calcium & D3</span><span>✦</span><span>Liver Support</span><span>✦</span><span>Breeding Support</span><span>✦</span><span>Immunity</span><span>✦</span>
-        <span>Multivitamins</span><span>✦</span><span>Electrolytes</span><span>✦</span><span>Calcium & D3</span><span>✦</span><span>Liver Support</span><span>✦</span><span>Breeding Support</span><span>✦</span><span>Immunity</span><span>✦</span>
+    <button class="s-nav prev" aria-label="Previous slide">‹</button>
+    <button class="s-nav next" aria-label="Next slide">›</button>
+    <div class="s-dots" role="tablist"></div>
+  </section>
+
+  <section class="section">
+    <div class="container intro-grid">
+      <div class="reveal">
+        <span class="eyebrow">Introduction</span>
+        <h2>Two Divisions. One Health-Focused Company.</h2>
+        <p class="muted-p"><b>Feathers NutriPharma (Pvt) Ltd</b> is a nutraceutical company working across <b>human and veterinary health</b>.</p>
+        <p class="muted-p">Our veterinary health journey began with nutritional solutions for companion animals and pet birds. Building on our scientific and veterinary background, we are now expanding into <b>human health</b>, developing and introducing specialized nutritional solutions for emerging healthcare needs.</p>
       </div>
+      <div class="reveal"><h3 class="approach-h">Our approach is based on</h3><ul class="checks cols2"><li>Scientific formulation</li><li>Targeted nutritional support</li><li>Quality-focused development</li><li>Veterinary and healthcare expertise</li><li>Research and innovation</li><li>Responsible health communication</li></ul></div>
     </div>
   </section>
 
-  <!-- New arrivals -->
-  <section class="section" id="new">
+  <section class="section alt" id="divisions">
     <div class="container">
-      <div class="section-head split reveal">
-        <div><span class="eyebrow">Just launched</span><h2>New Arrivals</h2></div>
-        <a href="products.html" class="btn btn-ghost">View all products</a>
-      </div>
-      <div class="product-grid" id="newGrid" data-ids="megavitb,cranro,citof,jaundy"></div>
-    </div>
-  </section>
-
-  <!-- Best sellers -->
-  <section class="section alt" id="best">
-    <div class="container">
-      <div class="section-head split reveal">
-        <div><span class="eyebrow">Most trusted</span><h2>Our Best Sellers</h2></div>
-        <a href="products.html?cat=birds" class="btn btn-ghost">Shop Pet Birds</a>
-      </div>
-      <div class="product-grid cols3" id="bestGrid" data-ids="avivit,dcal,mpower"></div>
-      <p class="note">Click any product for details. Prices are indicative and vary by pack size.</p>
-    </div>
-  </section>
-
-  <!-- CEO message -->
-  <section class="section about">
-    <div class="container about-inner">
-      <div class="about-visual reveal">
-        <div class="about-card main showcase ceo-portrait">
-          <img src="images/ceo.webp" alt="Dr. Muhammad Haseeb Saeed, Director / CEO of Feathers Nutripharma">
-          <p class="showcase-cap"><span>Director / CEO</span>Dr. Muhammad Haseeb Saeed</p>
-        </div>
-      </div>
-      <div class="about-copy reveal">
-        <span class="eyebrow">Message from the CEO</span>
-        <h2>Dr. Muhammad Haseeb Saeed</h2>
-        <p><b>Director / CEO</b></p>
-        <p>At Feathers Nutripharma Pvt Ltd, our vision is driven by a deep commitment to enhancing the health and well-being of pets through innovation, research and high-quality nutritional solutions.</p>
-        <a href="about.html" class="btn btn-primary">Read More</a>
+      <div class="section-head center reveal"><span class="eyebrow">Our Divisions</span><h2>One company. Two areas of health.</h2></div>
+      <div class="div-grid">
+        <article class="div-card reveal">
+          <div class="div-img" style="--img:url(../images/hero-2.jpg);--size:230%;--pos:62% 40%"></div>
+          <div class="div-body">
+            <span class="eyebrow">Human Health Division</span>
+            <h3>Nutritional Support for Human Health</h3>
+            <p>Our Human Health Division focuses on specialized nutraceutical solutions designed to complement healthcare and support nutritional needs in different stages of health and recovery.</p>
+            <a href="human-health.html" class="btn btn-primary">Explore Human Health →</a>
+          </div>
+        </article>
+        <article class="div-card reveal">
+          <div class="div-img" style="--img:url(../images/hero-1.jpg);--size:190%;--pos:100% 60%"></div>
+          <div class="div-body">
+            <span class="eyebrow">Veterinary Health Division</span>
+            <h3>Nutrition for Companion Animals &amp; Pet Birds</h3>
+            <p>Our Veterinary Health Division develops and provides nutritional solutions for companion animals and pet birds, supporting their health, vitality and quality of life.</p>
+            <a href="veterinary-health.html" class="btn btn-primary">Explore Veterinary Health →</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Holistic avian care -->
-  <section class="holistic">
-    <div class="container holistic-inner reveal">
-      <div>
-        <span class="eyebrow light">Holistic Avian Care</span>
-        <h2>Holistic Avian Care Beyond Nutrition</h2>
-        <p>Feathers Nutripharma goes beyond nutrition to support the overall health and happiness of your avian companions. From immune-boosting supplements to stress management solutions.</p>
-      </div>
-      <a href="products.html?cat=birds" class="btn btn-gold">SHOP NOW</a>
-    </div>
-  </section>
-
-  <!-- Quality -->
   <section class="section">
     <div class="container">
-      <div class="section-head center reveal"><span class="eyebrow">Our standards</span><h2>Built on quality, compliance and transparency.</h2></div>
-      <div class="values-grid">
-        <div class="value-card reveal"><span class="value-ico">01</span><h3>Quality Assurance</h3><p>Ensures that products are consistently manufactured and controlled according to rigorous quality standards.</p></div>
-        <div class="value-card reveal"><span class="value-ico">02</span><h3>Regulatory Compliance</h3><p>Demonstrates adherence to international regulatory guidelines in the manufacturing process and end products.</p></div>
-        <div class="value-card reveal"><span class="value-ico">03</span><h3>Process Transparency</h3><p>Promotes systematic and documented procedures for production, monitoring, and testing.</p></div>
+      <div class="section-head center reveal"><span class="eyebrow">Why Feathers NutriPharma?</span><h2>What sets our approach apart.</h2></div>
+      <div class="values-grid five"><div class="value-card reveal"><span class="value-ico">01</span><h3>Science-Based Approach</h3><p>We develop health and nutritional solutions around scientific understanding and practical healthcare needs.</p></div><div class="value-card reveal"><span class="value-ico">02</span><h3>Targeted Nutrition</h3><p>Our focus is on nutritional support designed for specific health and wellness requirements rather than generic supplementation.</p></div><div class="value-card reveal"><span class="value-ico">03</span><h3>Human &amp; Veterinary Expertise</h3><p>Our company operates across both human and veterinary health, allowing us to build knowledge across complementary areas of health science.</p></div><div class="value-card reveal"><span class="value-ico">04</span><h3>Research &amp; Innovation</h3><p>We continuously explore new formulations, ingredients and health applications to expand our nutraceutical portfolio.</p></div><div class="value-card reveal"><span class="value-ico">05</span><h3>Quality &amp; Responsibility</h3><p>We are committed to responsible product development, quality standards and clear health communication.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center reveal"><span class="eyebrow">Our Journey</span><h2>From Veterinary Science to Nutraceutical Innovation</h2></div>
+      <ol class="steps years">
+        <li class="reveal"><b>2013</b><h3>Veterinary Diagnostic Foundation</h3><p>Our wider scientific journey began with veterinary diagnostics and laboratory-based health investigation.</p></li>
+        <li class="reveal"><b>2022</b><h3>Feathers NutriPharma Established</h3><p>Feathers NutriPharma was established with a focus on veterinary nutraceutical solutions for companion animals and pet birds.</p></li>
+        <li class="reveal"><b>Today</b><h3>Expanding Human Health</h3><p>The company is expanding into human health with specialized nutraceutical solutions and new areas of nutritional support.</p></li>
+        <li class="reveal"><b>Future</b><h3>Building a Broader Health Platform</h3><p>Our goal is to develop Feathers into a diversified health and nutraceutical company serving both human and veterinary markets.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal"><span class="eyebrow">Science Ecosystem</span><h2>Part of a Growing Health &amp; Science Ecosystem</h2></div>
+      <div class="eco-grid">
+        <div class="eco-card reveal"><small>Veterinary Diagnostics</small><h3>Veterinary Diagnostic Lab</h3><p>Advanced veterinary diagnostics, molecular testing and animal health assessment.</p><a class="cat-link" href="#" data-vdl>Visit VDL →</a></div>
+        <div class="eco-card reveal"><small>Nutraceutical Innovation</small><h3>Feathers NutriPharma</h3><p>Nutritional solutions for human and veterinary health.</p><a class="cat-link" href="about.html">Explore Feathers →</a></div>
+        <div class="eco-card reveal"><small>Specialized Human Health</small><h3>NUTRAVA</h3><p>Specialized nutritional solutions focused on surgery and wound-healing support.</p><a class="cat-link" href="#" data-nutrava>Visit NUTRAVA →</a></div>
       </div>
     </div>
   </section>
 
-  <!-- Avian care resource -->
-  <section class="section alt care">
-    <div class="container">
-      <div class="section-head split reveal">
-        <div><span class="eyebrow">Avian Care Resource</span><h2>Learn, care and connect.</h2></div>
-        <a href="avian-care.html" class="btn btn-ghost">All articles</a>
-      </div>
-      <div class="care-grid" id="careGrid" data-limit="3"></div>
+  <section class="final">
+    <div class="container final-inner reveal">
+      <h2>Health Is Our Common Ground</h2>
+      <p>From human healthcare to veterinary nutrition, Feathers NutriPharma is building a health-focused company around science, innovation and targeted nutritional support.</p>
+      <p class="final-line">Human Health | Veterinary Health | Nutraceutical Innovation</p>
+      <a href="#divisions" class="btn btn-gold">Explore Our Divisions →</a>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="logo light">
-          <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true"><path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/><path d="M17 49L44 16" stroke="#0b3f35" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
-        </a>
-        <p>Pioneer in Avian Health and Wellness</p>
+        <a href="index.html" class="logo light" aria-label="Feathers NutriPharma home"><img class="logo-img" src="images/logo-white.png" alt="Feathers NutriPharma (Private) Limited"></a>
+        <p>Science-Based Nutrition for Better Health</p>
+        <p class="f-contact">13-A/1, Gulshan-e-Mustafa Society, C-2 Block, Johar Town, Lahore, Pakistan<br>+92 331 6465 497<br>(042) 351 92829 · (042) 351 94228<br>Mon – Sat, 9:00 AM – 6:00 PM</p>
       </div>
-      <div><h4>Explore</h4><a href="index.html">Home</a><a href="products.html">Animal Health</a><a href="human-health.html">Human Health</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
-      <div><h4>Animal Health</h4><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a><a href="avian-care.html">Avian Care</a></div>
-      <div><h4>Follow us</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
+      <div><h4>Company</h4><a href="index.html">Home</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
+      <div><h4>Human Health</h4><a href="human-health.html">Human Health Division</a><a href="surgery-wound-healing.html">Surgery &amp; Wound Healing</a><a href="#" data-nutrava>NUTRAVA</a></div>
+      <div><h4>Veterinary Health</h4><a href="veterinary-health.html">Veterinary Division</a><a href="pet-animals.html">Pet Animals</a><a href="pet-birds.html">Pet Birds</a><a href="avian-care.html">Avian Care Guides</a></div>
     </div>
     <div class="container footer-bottom">
-      <span>© <span id="year"></span> Feathers Nutripharma (Private) Limited. All rights reserved.</span>
-      <span>Pioneer in Avian Health and Wellness</span>
+      <span>© <span id="year"></span> Feathers NutriPharma (Pvt) Ltd. All rights reserved.</span>
+      <span>Human Health | Veterinary Health | Nutraceutical Innovation</span>
     </div>
   </footer>
 

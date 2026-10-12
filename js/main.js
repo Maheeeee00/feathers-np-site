@@ -260,7 +260,7 @@ renderCartUI();
 // Products
 document.querySelectorAll(".product-grid").forEach(grid => {
   const ids = grid.dataset.ids ? grid.dataset.ids.split(",") : null;
-  const list = ids ? ids.map(i => products.find(p => p.id === i)).filter(Boolean) : products.slice(0, +grid.dataset.limit || products.length);
+  const list = ids ? ids.map(i => products.find(p => p.id === i)).filter(Boolean) : grid.dataset.cat ? products.filter(p => p.cats.includes(grid.dataset.cat)) : products.slice(0, +grid.dataset.limit || products.length);
   grid.innerHTML = list.map(p => `
     <article class="product reveal" data-id="${p.id}" data-cats="${p.cats.join(" ")}" tabindex="0">
       <div class="product-stage" style="--tint:${p.tint}">
@@ -408,3 +408,22 @@ $("year").textContent = new Date().getFullYear();
     res.innerHTML=hits.length?hits.map(p=>`<a class="sr" href="products.html"><img src="images/products/${p.id}.webp" alt=""><span><b>${p.name}</b><small>${p.tag} · ${p.price}</small></span></a>`).join(""):'<p class="muted">No products found.</p>';
   });
 })();
+
+
+// Hero slider
+(function(){
+  const s=document.querySelector(".slider"); if(!s) return;
+  const slides=[...s.querySelectorAll(".slide")], dots=s.querySelector(".s-dots"); let i=0,t;
+  slides.forEach((_,n)=>{const b=document.createElement("button");b.setAttribute("aria-label","Go to slide "+(n+1));b.addEventListener("click",()=>{go(n);restart()});dots.appendChild(b)});
+  const go=n=>{i=(n+slides.length)%slides.length;slides.forEach((x,k)=>x.classList.toggle("active",k===i));[...dots.children].forEach((d,k)=>d.classList.toggle("active",k===i))};
+  const restart=()=>{clearInterval(t);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)t=setInterval(()=>go(i+1),7000)};
+  s.querySelector(".prev").addEventListener("click",()=>{go(i-1);restart()});
+  s.querySelector(".next").addEventListener("click",()=>{go(i+1);restart()});
+  s.addEventListener("mouseenter",()=>clearInterval(t)); s.addEventListener("mouseleave",restart);
+  go(0);restart();
+})();
+
+// External brand links: set the real URLs here
+const EXTERNAL = { nutrava: "#", vdl: "#" };
+document.querySelectorAll("[data-nutrava]").forEach(a => { a.href = EXTERNAL.nutrava; if (EXTERNAL.nutrava !== "#") { a.target = "_blank"; a.rel = "noopener"; } });
+document.querySelectorAll("[data-vdl]").forEach(a => { a.href = EXTERNAL.vdl; if (EXTERNAL.vdl !== "#") { a.target = "_blank"; a.rel = "noopener"; } });

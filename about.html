@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | Feathers Nutripharma</title>
-  <meta name="description" content="Learn about Feathers Nutripharma, our mission, vision and approach to avian and pet nutrition." />
+  <title>About Us | Feathers NutriPharma</title>
+  <meta name="description" content="About Feathers NutriPharma — science, nutrition, health." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M50 6C30 8 14 24 12 46l-6 12 4 2 6-11c20-2 36-18 38-43z' fill='%230f5c4d'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,24 +12,19 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Feathers Nutripharma home">
-        <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
-          <path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/>
-          <path d="M17 49L44 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M24 40l10 1M29 33l10 1M34 26l9 1" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
-        </svg>
-        <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
-      </a>
+      <a href="index.html" class="logo" aria-label="Feathers NutriPharma home"><img class="logo-img" src="images/logo.png" alt="Feathers NutriPharma (Private) Limited"></a>
       <nav class="nav" id="nav">
         <a href="index.html">Home</a>
         <div class="has-sub">
-          <a href="products.html">Animal Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="sub"><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a></div>
+          <a href="human-health.html">Human Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="sub"><a href="human-health.html">Human Health Division</a><a href="surgery-wound-healing.html">Surgery &amp; Wound Healing</a><a href="#" data-nutrava>NUTRAVA</a></div>
         </div>
-        <a href="human-health.html">Human Health</a>
+        <div class="has-sub">
+          <a href="veterinary-health.html">Veterinary Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="sub"><a href="veterinary-health.html">Veterinary Division</a><a href="pet-animals.html">Pet Animals</a><a href="pet-birds.html">Pet Birds</a><a href="products.html">Shop Products</a></div>
+        </div>
         <a href="about.html" class="active" aria-current="page">About us</a>
         <a href="contact.html">Contact us</a>
       </nav>
@@ -43,98 +38,71 @@
   <div class="search-overlay" id="searchOverlay" aria-hidden="true">
     <div class="search-box">
       <button class="search-close" id="searchClose" aria-label="Close search">×</button>
-      <input id="searchInput" type="search" placeholder="Start typing to see products you are looking for." autocomplete="off">
+      <input id="searchInput" type="search" placeholder="Search our veterinary products" autocomplete="off">
       <div id="searchResults" class="search-results"></div>
     </div>
   </div>
 
   <section class="page-hero">
-    <div class="hero-bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div></div>
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About</span></nav>
       <span class="eyebrow">About us</span>
-      <h1>A Legacy of Innovation in <em>Veterinary Science</em></h1>
-      <p class="lead">Pioneer in Avian Health and Wellness.</p>
-    </div>
-  </section>
-<!-- About -->
-  <section class="section about">
-    <div class="container about-inner">
-      <div class="about-visual reveal">
-        <div class="about-card main showcase">
-          <div class="showcase-grid">
-            <img src="images/products/avivit.webp" alt="AviVit-D Breeder">
-            <img src="images/products/mpower.webp" alt="M-Power">
-            <img src="images/products/dcal.webp" alt="D-Cal Super">
-            <img src="images/products/jaundy.webp" alt="Jaundy Syrup">
-          </div>
-          <p class="showcase-cap"><span>Feathers Nutripharma</span>“Every pet deserves the best care.”</p>
-        </div>
-        
-      </div>
-      <div class="about-copy reveal">
-        <span class="eyebrow">About Feathers Nutripharma</span>
-        <h2>Innovation and research, in service of healthier pets.</h2>
-        <p>Feathers Nutripharma (Pvt) Ltd develops scientifically formulated supplements and health products built around the specific needs of birds and companion animals. Our approach goes beyond nutrition — supporting immunity, stress resilience and overall wellbeing so pets can truly thrive.</p>
-        <div class="ceo">
-          <img class="ceo-photo" src="images/ceo.webp" alt="Dr. Muhammad Haseeb Saeed">
-          <div>
-            <b>Dr. Muhammad Haseeb Saeed</b>
-            <small>Director / CEO</small>
-            <p>Our vision is driven by a commitment to improving the health and wellbeing of pets through innovation, research and high‑quality nutritional solutions.</p>
-          </div>
-        </div>
-        
-      </div>
+      <h1>Science. Nutrition. <em>Health.</em></h1>
+      <p class="lead">About Feathers NutriPharma</p>
     </div>
   </section>
 
-  
+  <section class="section">
+    <div class="container intro-grid">
+      <div class="reveal">
+        <p class="muted-p"><b>Feathers NutriPharma (Pvt) Ltd</b> is a Pakistan-based nutraceutical company working across <b>human and veterinary health</b>.</p>
+        <p class="muted-p">The company was established to develop and provide innovative nutritional solutions addressing practical health needs.</p>
+        <p class="muted-p">Our journey has its roots in veterinary science, diagnostics and animal health. Over time, this experience developed into a broader interest in nutraceutical research and targeted nutritional support.</p>
+        <p class="muted-p">As the company grows, our focus remains on science, quality, innovation and responsible healthcare.</p>
+      </div>
+      <div class="reveal"><h3 class="approach-h">Today, Feathers operates through two developing areas</h3>
+        <div class="pair stack"><a class="mini" href="human-health.html"><b>Human Health Division</b><span>Specialized nutritional solutions for human healthcare and wellness.</span></a><a class="mini" href="veterinary-health.html"><b>Veterinary Health Division</b><span>Nutraceutical solutions for companion animals and pet birds.</span></a></div>
+      </div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="container">
+      <div class="vm-grid">
+        <div class="vm reveal"><span class="eyebrow">Vision</span><p>To build a trusted health and nutraceutical company connecting science, nutrition and innovation across human and veterinary health.</p></div>
+        <div class="vm reveal"><span class="eyebrow">Mission</span><p>To develop and promote scientifically informed nutraceutical solutions that support better health, recovery, vitality and quality of life in humans and animals.</p></div>
+      </div>
+    </div>
+  </section>
   <section class="section">
     <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Mission & Vision</span>
-        <h2>What guides every formula we make.</h2>
-      </div>
-      <div class="values-grid">
-        <div class="value-card reveal"><span class="value-ico">01</span><h3>Our Mission</h3><p>To revolutionize pet health through advanced, science-backed nutraceuticals that promote longevity and vitality.</p></div>
-        <div class="value-card reveal"><span class="value-ico">02</span><h3>Our Vision</h3><p>To be the global leader in pet nutraceuticals, offering permanent solutions for pet health challenges.</p></div>
-        <div class="value-card reveal"><span class="value-ico">03</span><h3>CEO Message</h3><p>Every pet deserves the best care. Our goal is to build products that meet pets’ specific needs and create a healthier future for pets.</p></div>
+      <div class="section-head center reveal"><span class="eyebrow">Our Values</span><h2>What guides our work</h2></div>
+      <div class="values-grid five"><div class="value-card reveal"><span class="value-ico">01</span><h3>Scientific Integrity</h3><p>We believe health solutions should be guided by scientific knowledge and evidence.</p></div><div class="value-card reveal"><span class="value-ico">02</span><h3>Innovation</h3><p>We continuously explore new nutritional applications and formulations.</p></div><div class="value-card reveal"><span class="value-ico">03</span><h3>Quality</h3><p>We place strong emphasis on quality, consistency and responsible product development.</p></div><div class="value-card reveal"><span class="value-ico">04</span><h3>Healthcare Focus</h3><p>Our solutions are developed around real nutritional and healthcare needs.</p></div><div class="value-card reveal"><span class="value-ico">05</span><h3>Responsibility</h3><p>We communicate health benefits responsibly and encourage appropriate professional guidance where required.</p></div></div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="container narrow">
+      <div class="ceo reveal">
+        <img class="ceo-photo" src="images/ceo.webp" alt="Dr. Muhammad Haseeb Saeed">
+        <div><b>Dr. Muhammad Haseeb Saeed</b> <small>Director / CEO</small>
+        <p>At Feathers NutriPharma Pvt Ltd, our vision is driven by a deep commitment to enhancing the health and well-being of pets and people through innovation, research and high-quality nutritional solutions.</p></div>
       </div>
     </div>
   </section>
 
-  
-
-
-  <!-- CTA band -->
-  <section class="cta-band">
-    <div class="container cta-inner reveal">
-      <div>
-        <h2>Stock Feathers Nutripharma in your store.</h2>
-        <p>Pet shops, vets and distributors — get trade pricing and product support.</p>
-      </div>
-      <a href="contact.html" class="btn btn-gold">Partner with us</a>
-    </div>
-  </section>
-
-  
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="logo light">
-          <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true"><path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/><path d="M17 49L44 16" stroke="#0b3f35" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
-        </a>
-        <p>Pioneer in Avian Health and Wellness</p>
+        <a href="index.html" class="logo light" aria-label="Feathers NutriPharma home"><img class="logo-img" src="images/logo-white.png" alt="Feathers NutriPharma (Private) Limited"></a>
+        <p>Science-Based Nutrition for Better Health</p>
+        <p class="f-contact">13-A/1, Gulshan-e-Mustafa Society, C-2 Block, Johar Town, Lahore, Pakistan<br>+92 331 6465 497<br>(042) 351 92829 · (042) 351 94228<br>Mon – Sat, 9:00 AM – 6:00 PM</p>
       </div>
-      <div><h4>Explore</h4><a href="index.html">Home</a><a href="products.html">Animal Health</a><a href="human-health.html">Human Health</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
-      <div><h4>Animal Health</h4><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a><a href="avian-care.html">Avian Care</a></div>
-      <div><h4>Follow us</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
+      <div><h4>Company</h4><a href="index.html">Home</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
+      <div><h4>Human Health</h4><a href="human-health.html">Human Health Division</a><a href="surgery-wound-healing.html">Surgery &amp; Wound Healing</a><a href="#" data-nutrava>NUTRAVA</a></div>
+      <div><h4>Veterinary Health</h4><a href="veterinary-health.html">Veterinary Division</a><a href="pet-animals.html">Pet Animals</a><a href="pet-birds.html">Pet Birds</a><a href="avian-care.html">Avian Care Guides</a></div>
     </div>
     <div class="container footer-bottom">
-      <span>© <span id="year"></span> Feathers Nutripharma (Private) Limited. All rights reserved.</span>
-      <span>Pioneer in Avian Health and Wellness</span>
+      <span>© <span id="year"></span> Feathers NutriPharma (Pvt) Ltd. All rights reserved.</span>
+      <span>Human Health | Veterinary Health | Nutraceutical Innovation</span>
     </div>
   </footer>
 
