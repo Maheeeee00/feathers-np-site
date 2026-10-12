@@ -1,206 +1,254 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Feathers Nutripharma | Science-Led Avian & Pet Nutrition</title>
-  <meta name="description" content="Scientifically formulated vitamins, minerals, electrolytes and health syrups for pet birds and animals in Pakistan." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M50 6C30 8 14 24 12 46l-6 12 4 2 6-11c20-2 36-18 38-43z' fill='%230f5c4d'/%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startwell Education | A Good Start Gives Wings to Fly</title>
+<meta name="description" content="Startwell Education — a modern school offering quality education from Playgroup to Matric with caring teachers and a safe campus.">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <header class="header" id="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Feathers Nutripharma home">
-        <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
-          <path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/>
-          <path d="M17 49L44 16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M24 40l10 1M29 33l10 1M34 26l9 1" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
-        </svg>
-        <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
-      </a>
-      <nav class="nav" id="nav">
-        <a href="index.html" class="active" aria-current="page">Home</a>
-        <div class="has-sub">
-          <a href="products.html">Animal Health <svg class="chev" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="sub"><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a></div>
-        </div>
-        <a href="human-health.html">Human Health</a>
-        <a href="about.html">About us</a>
-        <a href="contact.html">Contact us</a>
-      </nav>
-      <div class="head-tools">
-        <button class="icon-btn" id="searchBtn" aria-label="Search products"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
-        <a class="cart" href="products.html" aria-label="Shopping cart"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg><span class="cart-count">0</span><b>Rs0.00</b></a>
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+<div class="preloader"><div class="pl-inner"><img src="images/logo.jpg" alt=""><div class="pl-bar"></div><small>START WELL TO END WELL</small></div></div>
+<div class="scroll-progress"></div>
+<div class="topbar">
+  <div class="container">
+    <div>
+      <span><i class="fa-solid fa-phone"></i> +92 340 1501700</span>
+      <span class="hide-sm"><i class="fa-solid fa-envelope"></i> startwelleducation@gmail.com</span>
+      <span class="hide-sm"><i class="fa-regular fa-clock"></i> Mon – Sat: 8:00 AM – 2:00 PM</span>
     </div>
-  </header>
-  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
-    <div class="search-box">
-      <button class="search-close" id="searchClose" aria-label="Close search">×</button>
-      <input id="searchInput" type="search" placeholder="Start typing to see products you are looking for." autocomplete="off">
-      <div id="searchResults" class="search-results"></div>
+    <div class="socials">
+      <a href="https://www.facebook.com/startwell.educationbhimber/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@startwell.edu" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
     </div>
   </div>
-<!-- Hero -->
-  <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="blob b1"></div><div class="blob b2"></div><div class="grain"></div>
-    </div>
-    <div class="container hero-inner">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">Feathers Nutripharma (Private) Limited</span>
-        <h1>Pioneer in Avian Health and <em>Wellness</em></h1>
-        <p class="lead">Feathers Nutripharma goes beyond nutrition to support the overall health and happiness of your avian companions — from immune-boosting supplements to stress management solutions.</p>
-        <div class="hero-cta">
-          <a href="products.html" class="btn btn-primary">Explore Products
-            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="about.html" class="btn btn-ghost">About us</a>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Startwell Education logo">
+      <div class="brand-text"><strong>Startwell</strong><small>Education</small></div>
+    </a>
+    <nav class="nav">
+      <button class="menu-toggle nav-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+      <a href="index.html" class="active">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <div class="nav-item">
+        <a href="academics.html">Academics <i class="fa-solid fa-caret-down caret"></i></a>
+        <button class="sub-toggle" aria-label="Show Academics pages"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown">
+          <a href="curriculum.html"><i class="fa-solid fa-book-open"></i>Curriculum</a>
+          <a href="faculty.html"><i class="fa-solid fa-chalkboard-user"></i>Faculty &amp; Staff</a>
+          <a href="calendar.html"><i class="fa-regular fa-calendar-days"></i>School Calendar</a>
         </div>
-        <ul class="hero-trust">
-          <li><b data-count="9">0</b><span>Core formulas</span></li>
-          <li><b data-count="12">0</b><span>Vitamins in AviVit-D</span></li>
-          <li><b>PK</b><span>Nationwide reach</span></li>
+      </div>
+      <div class="nav-item">
+        <a href="activities.html">Activities <i class="fa-solid fa-caret-down caret"></i></a>
+        <button class="sub-toggle" aria-label="Show Activities pages"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown">
+          <a href="online-activities.html"><i class="fa-brands fa-tiktok"></i>Online Activities</a>
+          <a href="facebook.html"><i class="fa-brands fa-facebook"></i>Facebook Page</a>
+          <a href="projects.html"><i class="fa-solid fa-diagram-project"></i>Projects</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="teams.html">Teams <i class="fa-solid fa-caret-down caret"></i></a>
+        <button class="sub-toggle" aria-label="Show Teams pages"><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown">
+          <a href="junior-media-team.html"><i class="fa-solid fa-video"></i>Junior Media Team</a>
+          <a href="senior-media-team.html"><i class="fa-solid fa-microphone-lines"></i>Senior Media Team</a>
+          <a href="spelling-bee.html"><i class="fa-solid fa-spell-check"></i>StartWell Spelling Bee</a>
+        </div>
+      </div>
+      <a href="admissions.html">Admissions</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+<div class="ticker" aria-label="Latest news">
+  <div class="ticker-label"><span class="live-dot"></span>LATEST</div>
+  <div class="ticker-track"><div class="ticker-move"><div class="ticker-group"><a href="admissions.html"><i class="fa-solid fa-bullhorn"></i>Admissions Open for Session 2026–27 — Playgroup to Class 10</a><a href="aboutus.html"><i class="fa-solid fa-star"></i>Start Well to End Well</a><a href="calendar.html"><i class="fa-regular fa-calendar"></i>Youm-e-Tasees AJK holiday — 24 October 2026</a><a href="junior-media-team.html"><i class="fa-solid fa-video"></i>Meet our Junior Media Team — student anchors &amp; reporters</a><a href="spelling-bee.html"><i class="fa-solid fa-spell-check"></i>StartWell Spelling Bee — get ready to spell!</a><a href="faculty.html"><i class="fa-solid fa-school"></i>4 Campuses · 40+ Qualified Teaching Staff</a><a href="admissions.html"><i class="fa-solid fa-book-quran"></i>Hifz Department — admissions open</a><a href="online-activities.html"><i class="fa-brands fa-tiktok"></i>Follow us on TikTok @startwell.edu</a></div><div class="ticker-group" aria-hidden="true"><a href="admissions.html"><i class="fa-solid fa-bullhorn"></i>Admissions Open for Session 2026–27 — Playgroup to Class 10</a><a href="aboutus.html"><i class="fa-solid fa-star"></i>Start Well to End Well</a><a href="calendar.html"><i class="fa-regular fa-calendar"></i>Youm-e-Tasees AJK holiday — 24 October 2026</a><a href="junior-media-team.html"><i class="fa-solid fa-video"></i>Meet our Junior Media Team — student anchors &amp; reporters</a><a href="spelling-bee.html"><i class="fa-solid fa-spell-check"></i>StartWell Spelling Bee — get ready to spell!</a><a href="faculty.html"><i class="fa-solid fa-school"></i>4 Campuses · 40+ Qualified Teaching Staff</a><a href="admissions.html"><i class="fa-solid fa-book-quran"></i>Hifz Department — admissions open</a><a href="online-activities.html"><i class="fa-brands fa-tiktok"></i>Follow us on TikTok @startwell.edu</a></div></div></div>
+</div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-shapes"><span class="s1"></span><span class="s2"></span><span class="s3"></span></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="badge reveal"><i class="fa-solid fa-star"></i> Start Well to End Well — Admissions Open</div>
+      <h1 class="hero-title"><span class="w">A</span> <span class="w">good</span> <span class="w">start</span> <em class="w">gives</em> <em class="w">wings</em> <span class="w">to</span> <span class="w">fly.</span></h1>
+      <p class="reveal d2">At Startwell Education we nurture curious, confident and caring learners — with dedicated teachers, a modern campus and values that last a lifetime.</p>
+      <div class="hero-actions reveal d3">
+        <a href="contact.html" class="btn btn-primary">Apply for Admission <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="aboutus.html" class="btn btn-outline">Discover Our School</a>
+      </div>
+    </div>
+  </div>
+  <a href="#welcome" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</section>
+
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><div class="num"><b data-count="40">0</b><span>+</span></div><p>Teaching Staff</p></div>
+      <div class="stat"><div class="num"><b data-count="5">0</b><span>+</span></div><p>Yrs Avg. Teacher Experience</p></div>
+      <div class="stat"><div class="num"><b data-count="100">0</b><span>%</span></div><p>Qualified Faculty</p></div>
+      <div class="stat"><div class="num"><b data-count="4">0</b></div><p>Campuses</p></div>
+    </div>
+  </div>
+</div>
+
+<section id="welcome">
+  <div class="container grid-2">
+    <div class="collage reveal"><figure class="c1"><img src="images/principal-speech.jpg" alt="Principal addressing a ceremony" loading="lazy"></figure><figure class="c2"><img src="images/group-photo.jpg" alt="Students and staff" loading="lazy"></figure><figure class="c3"><img src="images/award-ceremony.jpg" alt="Award presentation" loading="lazy"></figure><figure class="c4"><img src="images/back-to-school.jpg" alt="Back to school" loading="lazy"></figure><div class="float-badge"><i class="fa-solid fa-award"></i><div><strong>Quality Education</strong><small>Playgroup to Matric</small></div></div></div>
+    <div class="reveal d1">
+      <span class="eyebrow">Welcome to Startwell</span>
+      <h2>Where every child starts well and goes far.</h2>
+      <p class="lead">Startwell Education is built on a simple belief: when children feel safe, valued and inspired, they achieve far more than they imagined.</p>
+      <ul class="checklist">
+        <li><i class="fa-solid fa-check"></i> Spacious, purpose-built campus with bright classrooms</li>
+        <li><i class="fa-solid fa-check"></i> Experienced, caring and well-trained faculty</li>
+        <li><i class="fa-solid fa-check"></i> Strong focus on English, Science and Mathematics</li>
+        <li><i class="fa-solid fa-check"></i> Islamic values, discipline and character building</li>
+      </ul>
+      <a href="aboutus.html" class="btn btn-dark">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Everything your child needs to thrive</h2>
+      <p class="lead">A balanced education that develops the mind, the heart and the hands.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal"><div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div><h3>Expert Teachers</h3><p>Qualified educators who know every child by name and teach with patience and passion.</p></div>
+      <div class="card navy reveal d1"><div class="icon"><i class="fa-solid fa-flask"></i></div><h3>Modern Learning</h3><p>Activity-based teaching, science and computer labs, and a library that sparks curiosity.</p></div>
+      <div class="card reveal d2"><div class="icon"><i class="fa-solid fa-shield-heart"></i></div><h3>Safe Campus</h3><p>A secure, clean and supervised environment where children feel at home.</p></div>
+      <div class="card navy reveal"><div class="icon"><i class="fa-solid fa-mosque"></i></div><h3>Moral Values</h3><p>Islamic teachings, good manners and respect are woven into everyday school life.</p></div>
+      <div class="card reveal d1"><div class="icon"><i class="fa-solid fa-futbol"></i></div><h3>Sports &amp; Activities</h3><p>Sports, arts, debates and events that build confidence beyond the classroom.</p></div>
+      <div class="card navy reveal d2"><div class="icon"><i class="fa-solid fa-people-roof"></i></div><h3>Parent Partnership</h3><p>Regular parent-teacher meetings and progress reports keep families involved.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-navy">
+  <div class="container principal">
+    <div class="principal-photo reveal">
+      <img src="images/principal.jpg" alt="Ali Hussain, Principal of Start Well Education">
+      <div class="tag"><strong>Ali Hussain</strong><small>Principal &amp; Managing Director</small></div>
+    </div>
+    <div class="reveal d1">
+      <span class="eyebrow" style="color:var(--gold)">Principal&#39;s Message</span>
+      <h2>Building strong foundations for bright futures</h2>
+      <blockquote>“Education is not only about marks — it is about shaping confident, honest and kind human beings. At Startwell, we promise every parent that their child will be cared for, challenged and celebrated.”</blockquote>
+      <p style="margin-top:24px;color:#b8c3e3">Our doors are always open. I warmly invite you to visit our campus and see our students and teachers in action.</p>
+      <div class="signature">— Ali Hussain, Principal &amp; Managing Director</div><a href="faculty.html#principal" class="btn btn-primary" style="margin-top:20px">View Principal&#39;s Profile <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our Programs</span>
+      <h2>Learning at every stage</h2>
+    </div>
+    <div class="grid-4">
+      <div class="program reveal"><div class="program-top o"><i class="fa-solid fa-shapes"></i><h3>Early Years</h3><span>Playgroup – Prep</span></div><div class="program-body"><p style="color:var(--muted);margin:0">Play-based learning, phonics, numbers and social skills in a warm, colourful setting.</p></div></div>
+      <div class="program reveal d1"><div class="program-top"><i class="fa-solid fa-book-open"></i><h3>Primary</h3><span>Class 1 – 5</span></div><div class="program-body"><p style="color:var(--muted);margin:0">Strong basics in English, Urdu, Maths, Science and Islamiat with activity-based teaching.</p></div></div>
+      <div class="program reveal d2"><div class="program-top t"><i class="fa-solid fa-microscope"></i><h3>Middle</h3><span>Class 6 – 8</span></div><div class="program-body"><p style="color:var(--muted);margin:0">Deeper concepts, lab work, computer studies and project-based learning.</p></div></div>
+      <div class="program reveal d3"><div class="program-top p"><i class="fa-solid fa-graduation-cap"></i><h3>Secondary</h3><span>Class 9 – 10</span></div><div class="program-body"><p style="color:var(--muted);margin:0">Focused board exam preparation in Science and Arts groups with regular testing.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="reveal"><a href="academics.html" class="btn btn-dark">View Academics <i class="fa-solid fa-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container grid-2">
+    <div class="reveal">
+      <span class="eyebrow">Life at Startwell</span>
+      <h2>Moments that make us proud</h2>
+      <p class="lead">Ceremonies, award days, welcome events and everyday smiles — see how our students learn, celebrate and grow together.</p>
+      <a href="gallery.html" class="btn btn-primary" style="margin-top:10px">Explore Gallery <i class="fa-solid fa-images"></i></a>
+    </div>
+    <div class="collage reveal"><figure class="c1"><img src="images/welcome-ceremony.jpg" alt="Welcome ceremony" loading="lazy"></figure><figure class="c2"><img src="images/guests-ceremony.jpg" alt="Honourable guests" loading="lazy"></figure><figure class="c3"><img src="images/group-photo.jpg" alt="Students and staff" loading="lazy"></figure><figure class="c4"><img src="images/award-ceremony.jpg" alt="Award presentation" loading="lazy"></figure></div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">Admissions Open</span>
+        <h2>Give your child the right start.</h2>
+        <p>Seats are limited. Visit our campus, meet our teachers and see why families trust Startwell Education.</p>
+      </div>
+      <div class="actions">
+        <a href="contact.html" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="tel:+923401501700" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:18px">
+          <img src="images/logo.jpg" alt="Startwell Education logo">
+          <div class="brand-text"><strong>Startwell</strong><small>Education</small></div>
+        </a>
+        <p>A place where young minds are given wings to fly — combining strong academics, good character and a caring environment.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/startwell.educationbhimber/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@startwell.edu" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="faculty.html">Faculty &amp; Staff</a></li>
+          <li><a href="calendar.html">School Calendar</a></li>
         </ul>
       </div>
-
-      <div class="hero-visual reveal">
-        <div class="orbit">
-          <div class="ring r1"></div><div class="ring r2"></div>
-          <img class="hero-photo" src="images/products/avivit.webp" alt="AviVit-D Breeder by Feathers Nutripharma">
-          <div class="float-card fc1">
-            <img class="fc-thumb" src="images/products/jaundy.webp" alt="">
-            <div><b>Jaundy Syrup</b><small>Liver health support</small></div>
-          </div>
-          <div class="float-card fc2">
-            <img class="fc-thumb" src="images/products/dcal.webp" alt="">
-            <div><b>D Cal Super</b><small>Calcium + Vitamin D3</small></div>
-          </div>
-          <div class="float-card fc3">
-            <img class="fc-thumb" src="images/products/mpower.webp" alt="">
-            <div><b>M Power</b><small>Vitamins + Amino acids</small></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Multivitamins</span><span>✦</span><span>Electrolytes</span><span>✦</span><span>Calcium & D3</span><span>✦</span><span>Liver Support</span><span>✦</span><span>Breeding Support</span><span>✦</span><span>Immunity</span><span>✦</span>
-        <span>Multivitamins</span><span>✦</span><span>Electrolytes</span><span>✦</span><span>Calcium & D3</span><span>✦</span><span>Liver Support</span><span>✦</span><span>Breeding Support</span><span>✦</span><span>Immunity</span><span>✦</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- New arrivals -->
-  <section class="section" id="new">
-    <div class="container">
-      <div class="section-head split reveal">
-        <div><span class="eyebrow">Just launched</span><h2>New Arrivals</h2></div>
-        <a href="products.html" class="btn btn-ghost">View all products</a>
-      </div>
-      <div class="product-grid" id="newGrid" data-ids="megavitb,cranro,citof,jaundy"></div>
-    </div>
-  </section>
-
-  <!-- Best sellers -->
-  <section class="section alt" id="best">
-    <div class="container">
-      <div class="section-head split reveal">
-        <div><span class="eyebrow">Most trusted</span><h2>Our Best Sellers</h2></div>
-        <a href="products.html?cat=birds" class="btn btn-ghost">Shop Pet Birds</a>
-      </div>
-      <div class="product-grid cols3" id="bestGrid" data-ids="avivit,dcal,mpower"></div>
-      <p class="note">Click any product for details. Prices are indicative and vary by pack size.</p>
-    </div>
-  </section>
-
-  <!-- CEO message -->
-  <section class="section about">
-    <div class="container about-inner">
-      <div class="about-visual reveal">
-        <div class="about-card main showcase ceo-portrait">
-          <img src="images/ceo.webp" alt="Dr. Muhammad Haseeb Saeed, Director / CEO of Feathers Nutripharma">
-          <p class="showcase-cap"><span>Director / CEO</span>Dr. Muhammad Haseeb Saeed</p>
-        </div>
-      </div>
-      <div class="about-copy reveal">
-        <span class="eyebrow">Message from the CEO</span>
-        <h2>Dr. Muhammad Haseeb Saeed</h2>
-        <p><b>Director / CEO</b></p>
-        <p>At Feathers Nutripharma Pvt Ltd, our vision is driven by a deep commitment to enhancing the health and well-being of pets through innovation, research and high-quality nutritional solutions.</p>
-        <a href="about.html" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Holistic avian care -->
-  <section class="holistic">
-    <div class="container holistic-inner reveal">
       <div>
-        <span class="eyebrow light">Holistic Avian Care</span>
-        <h2>Holistic Avian Care Beyond Nutrition</h2>
-        <p>Feathers Nutripharma goes beyond nutrition to support the overall health and happiness of your avian companions. From immune-boosting supplements to stress management solutions.</p>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="junior-media-team.html">Junior Media Team</a></li>
+          <li><a href="senior-media-team.html">Senior Media Team</a></li>
+          <li><a href="spelling-bee.html">StartWell Spelling Bee</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <a href="products.html?cat=birds" class="btn btn-gold">SHOP NOW</a>
-    </div>
-  </section>
-
-  <!-- Quality -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head center reveal"><span class="eyebrow">Our standards</span><h2>Built on quality, compliance and transparency.</h2></div>
-      <div class="values-grid">
-        <div class="value-card reveal"><span class="value-ico">01</span><h3>Quality Assurance</h3><p>Ensures that products are consistently manufactured and controlled according to rigorous quality standards.</p></div>
-        <div class="value-card reveal"><span class="value-ico">02</span><h3>Regulatory Compliance</h3><p>Demonstrates adherence to international regulatory guidelines in the manufacturing process and end products.</p></div>
-        <div class="value-card reveal"><span class="value-ico">03</span><h3>Process Transparency</h3><p>Promotes systematic and documented procedures for production, monitoring, and testing.</p></div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i><span>Bhimber, Azad Jammu &amp; Kashmir, Pakistan</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+92 340 1501700</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>startwelleducation@gmail.com</span></li>
+          <li><i class="fa-regular fa-clock"></i><span>Mon – Sat: 8:00 AM – 2:00 PM</span></li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- Avian care resource -->
-  <section class="section alt care">
-    <div class="container">
-      <div class="section-head split reveal">
-        <div><span class="eyebrow">Avian Care Resource</span><h2>Learn, care and connect.</h2></div>
-        <a href="avian-care.html" class="btn btn-ghost">All articles</a>
-      </div>
-      <div class="care-grid" id="careGrid" data-limit="3"></div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo light">
-          <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true"><path d="M52 6C31 8 15 24 13 46l-6 12 4 2 6-11c21-2 37-18 39-43z" fill="currentColor"/><path d="M17 49L44 16" stroke="#0b3f35" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span class="logo-text"><strong>Feathers</strong><small>NUTRIPHARMA</small></span>
-        </a>
-        <p>Pioneer in Avian Health and Wellness</p>
-      </div>
-      <div><h4>Explore</h4><a href="index.html">Home</a><a href="products.html">Animal Health</a><a href="human-health.html">Human Health</a><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
-      <div><h4>Animal Health</h4><a href="products.html?cat=animals">Pet Animals</a><a href="products.html?cat=birds">Pet Birds</a><a href="avian-care.html">Avian Care</a></div>
-      <div><h4>Follow us</h4><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> Feathers Nutripharma (Private) Limited. All rights reserved.</span>
-      <span>Pioneer in Avian Health and Wellness</span>
-    </div>
-  </footer>
-
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-box" role="dialog" aria-modal="true">
-      <button class="modal-close" data-close aria-label="Close">×</button>
-      <div id="modalBody"></div>
     </div>
   </div>
-
-  <script src="js/main.js"></script>
+  <div class="footer-bottom">© <span class="year-now">2026</span> Start Well Education, Bhimber — <em>Start Well to End Well</em>. All rights reserved.</div>
+</footer>
+<button class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
