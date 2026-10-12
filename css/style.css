@@ -368,3 +368,7 @@ h3{font-size:1.3rem;font-weight:600}
 .care-img span,.article-hero span{z-index:1}
 .article-hero{height:260px}
 .badge{z-index:2}
+
+/* real product photos in hero */
+.hero-photo{position:relative;width:60%;height:auto;object-fit:contain;mix-blend-mode:multiply;animation:bob 5s ease-in-out infinite;--s:1}
+.fc-thumb{width:44px;height:44px;border-radius:12px;object-fit:contain;background:#fff;mix-blend-mode:normal;flex:none}
