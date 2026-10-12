@@ -148,6 +148,115 @@ function photoNext(img){
   img.src = img.src.replace(/\.[a-z]+$/i, "." + exts[0]);
 }
 
+// ---- Variant prices (PKR). Prices per size are PROVISIONAL: smallest size = low end of the live-site range, largest = high end.
+// Edit the numbers here once you have the exact price list.
+const variantData = {
+  avivit:  [["100 g",3000],["500 g",10000]],
+  mpower:  [["Small",2000],["Large",25000]],
+  enlyte:  [["Small",1400],["Large",39900]],
+  dcal:    [["Small",1500],["Large",39900]],
+  jaundy:  [["30 ml",650],["120 ml",1350]],
+  megavitb:[["30 ml",650],["120 ml",1350]],
+  silima:  [["30 ml",650],["120 ml",1350]],
+  cranro:  [["30 ml",850],["120 ml",1650]],
+  citof:   [["30 ml",850],["120 ml",1650]],
+};
+allProducts.forEach(p => { p.variants = (variantData[p.id] || []).map(([label,price]) => ({label,price})); });
+const money = n => "Rs " + Number(n).toLocaleString("en-US");
+const money2 = n => "Rs" + Number(n).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+
+// ---- Cart (kept in this browser only)
+const CART_KEY = "fnp_cart";
+function loadCart(){ try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch(e){ return window.__cart || []; } }
+function saveCart(c){ window.__cart = c; try { localStorage.setItem(CART_KEY, JSON.stringify(c)); } catch(e){} renderCartUI(); }
+const findP = id => allProducts.find(p => p.id === id);
+const unitPrice = (id,size) => { const v = (findP(id)?.variants||[]).find(v => v.label === size); return v ? v.price : 0; };
+function cartTotals(c = loadCart()){
+  return { count: c.reduce((a,i)=>a+i.qty,0), subtotal: c.reduce((a,i)=>a+i.qty*unitPrice(i.id,i.size),0) };
+}
+function addToCart(id,size,qty){
+  const c = loadCart(); const row = c.find(i => i.id===id && i.size===size);
+  if (row) row.qty += qty; else c.push({id,size,qty});
+  saveCart(c);
+}
+const cartIcon = document.querySelector(".cart");
+const drawer = document.createElement("div");
+drawer.className = "cart-drawer"; drawer.id = "cartDrawer"; drawer.setAttribute("aria-hidden","true");
+drawer.innerHTML = '<div class="cd-backdrop" data-cd-close></div><aside class="cd-panel" role="dialog" aria-label="Shopping cart"><div class="cd-head"><h3>Your cart</h3><button class="cd-x" data-cd-close aria-label="Close cart">×</button></div><div class="cd-items" id="cdItems"></div><div class="cd-foot" id="cdFoot"></div></aside>';
+document.body.appendChild(drawer);
+const openCart = () => { renderCartUI(); drawer.classList.add("open"); drawer.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden"; };
+const closeCart = () => { drawer.classList.remove("open"); drawer.setAttribute("aria-hidden","true"); document.body.style.overflow=""; };
+function renderCartUI(){
+  const c = loadCart(), t = cartTotals(c);
+  document.querySelectorAll(".cart-count").forEach(e => e.textContent = t.count);
+  document.querySelectorAll(".cart b").forEach(e => e.textContent = money2(t.subtotal));
+  const items = $("cdItems"), foot = $("cdFoot"); if (!items) return;
+  if (!c.length){
+    items.innerHTML = '<p class="cd-empty">Your cart is empty.</p>';
+    foot.innerHTML = '<a href="products.html" class="btn btn-primary full">Continue shopping</a>';
+    return;
+  }
+  items.innerHTML = c.map((i,idx) => { const p = findP(i.id); return `
+    <div class="cd-item">
+      <img src="images/products/${p.id}.webp" alt="${p.name}">
+      <div class="cd-info"><b>${p.name}</b><small>${i.size}</small>
+        <div class="qty sm"><button type="button" data-cd-q="${idx}" data-d="-1" aria-label="Decrease">−</button><span>${i.qty}</span><button type="button" data-cd-q="${idx}" data-d="1" aria-label="Increase">+</button></div>
+      </div>
+      <div class="cd-price">${money(i.qty*unitPrice(i.id,i.size))}<button type="button" class="cd-rm" data-cd-rm="${idx}">Remove</button></div>
+    </div>`; }).join("");
+  foot.innerHTML = `<div class="cd-sub"><span>Subtotal</span><b>${money(t.subtotal)}</b></div>
+    <p class="cd-note">Shipping and taxes are calculated at checkout.</p>
+    <a href="checkout.html" class="btn btn-gold full">Buy now</a>
+    <a href="products.html" class="btn btn-ghost full">Continue shopping</a>`;
+}
+drawer.addEventListener("click", e => {
+  if (e.target.closest("[data-cd-close]")) return closeCart();
+  const q = e.target.closest("[data-cd-q]"), rm = e.target.closest("[data-cd-rm]");
+  const c = loadCart();
+  if (q){ const r = c[+q.dataset.cdQ]; r.qty = Math.max(1, r.qty + +q.dataset.d); saveCart(c); }
+  if (rm){ c.splice(+rm.dataset.cdRm,1); saveCart(c); }
+});
+if (cartIcon) cartIcon.addEventListener("click", e => { e.preventDefault(); openCart(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeCart(); });
+
+// product popup interactions
+modalBody.addEventListener("click", e => {
+  const box = e.target.closest(".buy"); if (!box) return;
+  const id = box.dataset.id, valEl = box.querySelector(".qty-val");
+  const size = () => box.querySelector(".size-opt.active").dataset.size;
+  const refresh = () => box.querySelector(".m-price").textContent = money(unitPrice(id,size()) * +valEl.textContent);
+  const so = e.target.closest(".size-opt");
+  if (so){ box.querySelectorAll(".size-opt").forEach(b => b.classList.toggle("active", b === so)); refresh(); }
+  const qb = e.target.closest(".qty-btn");
+  if (qb){ valEl.textContent = Math.max(1, +valEl.textContent + +qb.dataset.d); refresh(); }
+  if (e.target.closest("[data-add]")){ addToCart(id,size(),+valEl.textContent); closeModal(); openCart(); }
+  if (e.target.closest("[data-buy]")){ addToCart(id,size(),+valEl.textContent); location.href = "checkout.html"; }
+});
+
+// Checkout page
+const checkoutForm = $("checkoutForm");
+if (checkoutForm){
+  const c = loadCart(), t = cartTotals(c), sum = $("coSummary");
+  if (!c.length){
+    sum.innerHTML = '<p class="cd-empty">Your cart is empty. <a href="products.html" style="color:var(--green-700);font-weight:600">Browse products</a></p>';
+  } else {
+    sum.innerHTML = c.map(i => { const p = findP(i.id); return `<div class="co-item"><div class="co-thumb"><img src="images/products/${p.id}.webp" alt=""><i>${i.qty}</i></div><div class="co-name"><b>${p.name}</b><small>${i.size}</small></div><span>${money2(i.qty*unitPrice(i.id,i.size))}</span></div>`; }).join("") +
+      `<div class="co-row"><span>Subtotal</span><span>${money2(t.subtotal)}</span></div>
+       <div class="co-row"><span>Shipping</span><span class="co-muted">Calculated after address</span></div>
+       <div class="co-row"><span>Taxes</span><span class="co-muted">—</span></div>
+       <div class="co-row total"><span>Total</span><span><small>PKR</small> ${money2(t.subtotal)}</span></div>`;
+  }
+  checkoutForm.addEventListener("submit", e => {
+    e.preventDefault();
+    if (!loadCart().length){ $("coMsg").textContent = "Your cart is empty."; return; }
+    // Demo only: no payment or backend yet.
+    saveCart([]);
+    checkoutForm.style.display = "none"; $("coSummary").style.display = "none";
+    $("coDone").style.display = "block";
+  });
+}
+renderCartUI();
+
 // Products
 document.querySelectorAll(".product-grid").forEach(grid => {
   const ids = grid.dataset.ids ? grid.dataset.ids.split(",") : null;
@@ -179,9 +288,17 @@ document.querySelectorAll(".product-grid").forEach(grid => {
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
           <ul>${p.points.map(x => `<li>${x}</li>`).join("")}</ul>
-          <div class="sizes">${p.sizes.map(s => `<span>${s}</span>`).join("")}</div>
-          <p class="price">${p.from ? "<span>From </span>" : ""}${p.price}</p>
-          <a href="contact.html" class="btn btn-primary">Enquire about this product</a>
+          <div class="buy" data-id="${p.id}">
+            <div class="opt-label">Size</div>
+            <div class="sizes">${p.variants.map((v,i) => `<button type="button" class="size-opt${i===0?" active":""}" data-size="${v.label}">${v.label}</button>`).join("")}</div>
+            <p class="price m-price">${money(p.variants[0].price)}</p>
+            <div class="buy-row">
+              <div class="qty"><button type="button" class="qty-btn" data-d="-1" aria-label="Decrease">−</button><span class="qty-val">1</span><button type="button" class="qty-btn" data-d="1" aria-label="Increase">+</button></div>
+              <button type="button" class="btn btn-primary" data-add>Add to cart</button>
+            </div>
+            <button type="button" class="btn btn-gold full" data-buy>Buy now</button>
+            <a href="contact.html" class="enq">Enquire about this product</a>
+          </div>
         </div>
       </div>`);
   });
